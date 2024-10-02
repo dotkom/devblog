@@ -9,7 +9,7 @@ const NotFound = () => {
             <p>404: Page not found</p>
             <Image src={Image404} alt={"Jo, desverre, død"} height={500} className="justify-self-center rounded-md" />
             <div className="place-self-center">
-                <NavButton buttonText="Tilbake til forsiden" />
+                <NavButton buttonText="Andrej er lav :)" bgColor="primary" />
             </div>
         </main>
     );
