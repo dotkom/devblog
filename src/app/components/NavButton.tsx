@@ -6,8 +6,10 @@ interface NavButtonProps {
     bgColor?: string;
     borderColor?: string;
     textColor?: string;
-    paddingX?: number;
-    paddingY?: number;
+    width?: string;
+    paddingX?: string;
+    paddingY?: string;
+    title?: string;
 }
 
 //Funker egentlig ikke, ser på det senere :P
@@ -18,10 +20,24 @@ interface NavButtonProps {
 //Bro denne koden forvirrer meg, og jeg skrev den
 //Funker kanskje, vet egentlig ikke
 //^Her har dere en visualisering av prosessen programmerere går gjennom som gjøre dem gale^
-const NavButton: FC<NavButtonProps> = ({ buttonText, bgColor="primary", textColor="foreground", borderColor="secondary", paddingX=3, paddingY=3 }) => {
+const NavButton: FC<NavButtonProps> = ({ buttonText, bgColor="primary", textColor="foreground", borderColor="secondary", width="fit", paddingX=3, paddingY=3, title }) => {
     return (
         <Link href="/">
-            <div className={`px-${paddingX} py-${paddingY} bg-${bgColor} text-${textColor} border border-${borderColor} rounded`}>
+            <div className={`
+                px-${paddingX} 
+                py-${paddingY} 
+                bg-${bgColor} 
+                text-${textColor} 
+                border-2 
+                border-${borderColor} 
+                min-w-fit 
+                w-${width} 
+                max-w-[100vw] 
+                text-center
+                rounded`}
+
+                title={title}
+                >
                 {buttonText}
             </div>
         </Link>
@@ -29,3 +45,24 @@ const NavButton: FC<NavButtonProps> = ({ buttonText, bgColor="primary", textColo
 }
 
 export default NavButton;
+
+interface PresetNavButtonProps {
+    buttonText: string;
+    width?: string;
+    paddingX?: string;
+    paddingY?: string;
+}
+
+const NavButtonSecondary: FC<PresetNavButtonProps> = ({ buttonText, width="fit", paddingX="3", paddingY="3" }) => {
+    return NavButton({ buttonText, bgColor: "secondary", borderColor: "accent", width, paddingX, paddingY });
+}
+
+const NavButtonConfirm: FC<PresetNavButtonProps> = ({ buttonText, width="fit", paddingX="3", paddingY="3" }) => {
+    return NavButton({ buttonText, bgColor: "[#9CDB8E]", borderColor: "[#0DFF04]", width, paddingX, paddingY });
+}
+
+const NavButtonDeny: FC<PresetNavButtonProps> = ({ buttonText, width, paddingX="3", paddingY="3" }) => {
+    return NavButton({ buttonText, bgColor: "[#CD8585]", borderColor: "[#FF0101]", width, paddingX, paddingY });
+}
+
+export { NavButtonSecondary, NavButtonConfirm, NavButtonDeny };
