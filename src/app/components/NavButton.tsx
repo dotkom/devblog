@@ -19,8 +19,9 @@ interface NavButtonProps {
 //Jeg relauncha og det funka
 //Bro denne koden forvirrer meg, og jeg skrev den
 //Funker kanskje, vet egentlig ikke
-//^Her har dere en visualisering av prosessen programmerere går gjennom som gjøre dem gale^
-const NavButton: FC<NavButtonProps> = ({ buttonText, bgColor="primary", textColor="foreground", borderColor="secondary", width="fit", paddingX=3, paddingY=3, title }) => {
+//^Her har dere en visualisering av prosessen programmerere går gjennom som gjøre dem gale^ - Henry 2024-10-02
+//fyi, forvirrer meg fortsatt hvordan det er i limbo mellom å funke og ikke funke - Henry 2024-10-09
+const NavButton: FC<NavButtonProps> = ({ buttonText, bgColor="primary", textColor="text_secondary", borderColor="secondary", width="fit", paddingX=3, paddingY=3, title }) => {
     return (
         <Link href="/">
             <div className={`
@@ -51,18 +52,19 @@ interface PresetNavButtonProps {
     width?: string;
     paddingX?: string;
     paddingY?: string;
+    title?: string;
 }
 
-const NavButtonSecondary: FC<PresetNavButtonProps> = ({ buttonText, width="fit", paddingX="3", paddingY="3" }) => {
-    return NavButton({ buttonText, bgColor: "secondary", borderColor: "accent", width, paddingX, paddingY });
+const NavButtonSecondary: FC<PresetNavButtonProps> = ({ buttonText, width="fit", paddingX="3", paddingY="3", title }) => {
+    return NavButton({ buttonText, bgColor: "secondary", textColor: "foreground", borderColor: "accent", width, paddingX, paddingY, title });
 }
 
-const NavButtonConfirm: FC<PresetNavButtonProps> = ({ buttonText, width="fit", paddingX="3", paddingY="3" }) => {
-    return NavButton({ buttonText, bgColor: "[#9CDB8E]", borderColor: "[#0DFF04]", width, paddingX, paddingY });
+const NavButtonConfirm: FC<PresetNavButtonProps> = ({ buttonText, width="fit", paddingX="3", paddingY="3", title }) => {
+    return NavButton({ buttonText, bgColor: "[#9CDB8E]", textColor: "[#000000]", borderColor: "[#0DFF04]", width, paddingX, paddingY, title });
 }
 
-const NavButtonDeny: FC<PresetNavButtonProps> = ({ buttonText, width, paddingX="3", paddingY="3" }) => {
-    return NavButton({ buttonText, bgColor: "[#CD8585]", borderColor: "[#FF0101]", width, paddingX, paddingY });
+const NavButtonDeny: FC<PresetNavButtonProps> = ({ buttonText, width, paddingX="3", paddingY="3", title }) => {
+    return NavButton({ buttonText, bgColor: "[#D16D6D]", textColor: "[#FFFFFF]", borderColor: "[#FF0101]", width, paddingX, paddingY, title});
 }
 
 export { NavButtonSecondary, NavButtonConfirm, NavButtonDeny };
