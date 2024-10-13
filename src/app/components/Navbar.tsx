@@ -10,9 +10,9 @@ const Navbar = () => {
                 <Link href="/"className = "text-3xl font-bold">Dotkomk Devblog</Link>
             </div>
             <div className="flex flex-row gap-7 items-end font-bold text-2xl">
-                <Link href="/">Innlegg</Link>
-                <Link href="/">Om oss</Link>
-                <Link href="/"><Icon icon="jam:github" className="text-3xl" /></Link>
+                <Link href="/posts">Innlegg</Link>
+                <Link href="/about">Om oss</Link>
+                <Link href="https://github.com/dotkom/devblog" target="_blank"><Icon icon="jam:github" className="text-3xl" /></Link>
             </div>
         </nav>
     );
