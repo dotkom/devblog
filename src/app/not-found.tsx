@@ -5,7 +5,7 @@ import NavButton from "./components/NavButton";
 
 const NotFound = () => {
     return (
-        <main className="grid w-screen h-screen gap-4 place-content-center">
+        <main className="grid min-w-screen min-h-screen gap-4 place-content-center">
             <h1 className="text-5xl text-center">Ser ut som du har havnet på feil sted</h1>
             <p className="text-center">404: Page not found</p>
             <div className="flex flex-row justify-center">
