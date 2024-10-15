@@ -13,7 +13,7 @@ const NotFound = () => {
                 <Image src={Image404a} alt={"Jo, desverre, død i 2024"} width={300} className="justify-self-center rounded-l-none rounded-r-lg" />
             </div>
             <div className="place-self-center">
-                <NavButton buttonText="Andrej er lav :)" bgColor="primary" />
+                <NavButton buttonText="Andrej er lav :)" buttonLink="/" title="Tilbake til startsiden (Sikkert Andrej sin feil at du havna her, sorry!)" />
             </div>
         </main>
     );
