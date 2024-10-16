@@ -5,8 +5,8 @@ import Logo from "@/app/assets/onboarding_logo_rev_2.png";
 const Footer =()=>{
     return(
     <div className="flex flex-1 justify-between py-4 px-10 bg-primary text-white">
-        <div className="flex gap-3">
-            <Image src={Logo} alt={"Dotkom devlog logo"} height={75}/>
+        <div className="flex gap-3 items-center">
+            <Image src={Logo} alt={"Dotkom devlog logo"} height={125}/>
             <Link href="/" className="text-3xl font-bold"> Dotkom <br /> Devblog</Link>
         </div>
         <div className="flex flex-col justify-evenly flex-rowgap-10 items-center">
