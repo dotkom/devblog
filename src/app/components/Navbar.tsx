@@ -8,12 +8,12 @@ const Navbar = () => {
         <nav className="flex flex-1 justify-between py-2 px-10 bg-primary text-text_secondary items-center">                
             <Link href="/" className="flex items-center gap-5">
                 <Image src={logo2} alt={"Dotkomk devblog logo"} height={60}/>
-                <h2 className="text-3xl font-bold ">Dotkomk Devblog</h2>
+                <h2 className="text-3xl font-bold hover:text-background duration-100">Dotkomk Devblog</h2>
             </Link>
             <div className="flex flex-row gap-10 items-center font-bold text-2xl">
-                <Link href="/posts">Innlegg</Link>
-                <Link href="/about">Om oss</Link>
-                <Link href="https://github.com/dotkom/devblog" target="_blank"><Icon icon="jam:github" className="text-4xl" /></Link>
+                <Link href="/posts" className="hover:text-background duration-100">Innlegg</Link>
+                <Link href="/about" className="hover:text-background duration-100">Om oss</Link>
+                <Link href="https://github.com/dotkom/devblog" target="_blank" className="hover:text-background duration-100"><Icon icon="jam:github" className="text-4xl" /></Link>
             </div>
         </nav>
     );
