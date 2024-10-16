@@ -16,6 +16,9 @@ const config: Config = {
         secondary: "#711F8A",
         accent: "#B432DB",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
