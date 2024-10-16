@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 const Navbar = () => {
     return (
-        <nav className="flex flex-1 justify-between py-2 px-10 bg-primary text-text_secondary items-center">                
+        <nav className="flex flex-1 justify-between py-2 px-10 w-[100vw] bg-primary text-text_secondary items-center">                
             <Link href="/" className="flex items-center gap-5">
                 <Image src={logo2} alt={"Dotkomk devblog logo"} height={60}/>
                 <h2 className="text-3xl font-bold ">Dotkomk Devblog</h2>
