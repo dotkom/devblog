@@ -2,10 +2,12 @@ import Image from "next/image";
 import Image404a from "@/app/assets/404-mannen-after.jpg";
 import Image404b from "@/app/assets/404-mannen-before.jpg";
 import NavButton from "./components/NavButton";
+import Navbar from "./components/Navbar";
 
 const NotFound = () => {
     return (
         <main className="grid min-w-screen min-h-screen gap-4 place-content-center">
+            <Navbar />
             <h1 className="text-5xl text-center">Ser ut som du har havnet på feil sted</h1>
             <p className="text-center">404: Page not found</p>
             <div className="flex flex-row justify-center">

@@ -5,11 +5,11 @@ import { Icon } from "@iconify/react";
 
 const Navbar = () => {
     return (
-        <nav className="flex flex-1 justify-between py-4 px-10 bg-primary text-text_secondary">
-            <div className="flex gap-3">
-                <Image src={logo2} alt={"Dotkomk devblog logo"} height={75}/>
-                <Link href="/"className = "text-3xl font-bold">Dotkomk<br />Devblog</Link>
-            </div>
+        <nav className="flex flex-1 justify-between py-2 px-10 w-[100vw] bg-primary text-text_secondary items-center">                
+            <Link href="/" className="flex items-center gap-5">
+                <Image src={logo2} alt={"Dotkomk devblog logo"} height={60}/>
+                <h2 className="text-3xl font-bold ">Dotkomk Devblog</h2>
+            </Link>
             <div className="flex flex-row gap-10 items-center font-bold text-2xl">
                 <Link href="/posts">Innlegg</Link>
                 <Link href="/about">Om oss</Link>
