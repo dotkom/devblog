@@ -1,8 +1,14 @@
 import Post, { PostProps } from "./BlogPostTemplate"
+import onboardingLogo from "@/app/assets/onboarding_logo_rev_2.png"
 
 const anArticle: PostProps = {
     title: "Dotkom er best",
     hook: "Men det visste jo alle fra før. I tilfelle du er appkommer eller bare dum, og ikke er enig, så forklarer denne artikkelen hvorfor!",
+    image: {
+        src: onboardingLogo,
+        alt: "Dotkom sitt logo",
+        fill: false
+    },
     author: "Henry Græbserg",
     date: "23/10/2024",
     content: `The standard Lorem Ipsum passage, used since the 1500s
