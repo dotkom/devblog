@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar";
 
 const Page = () => {
     return (
         <>
-            <Navbar />
-            <h1>About</h1>
+            <div className="flex flex-1">
+                <h1>About</h1>
+            </div>
         </>
     )
 }
