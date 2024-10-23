@@ -1,8 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  }
-};
-
-export default nextConfig;
+    images: {
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "picsum.photos",
+        },
+      ],
+    },
+    eslint: {
+      ignoreDuringBuilds: true,
+    }
+  };
+  
+  export default nextConfig;
