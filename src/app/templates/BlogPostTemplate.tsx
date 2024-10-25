@@ -9,7 +9,7 @@ export interface PostProps {
   image?: {
     src: StaticImageData | string
     alt: string
-    fill: boolean
+    fill?: boolean
   },
   author: string
   date: string
@@ -17,6 +17,8 @@ export interface PostProps {
 }
 
 const Post: FC<PostProps> = ({ title, hook, image={src: "https://picsum.photos/1000/500", alt: "A randomly generated image from Lorem Picsum", fill: true}, author, date, content }) => {
+  image.fill ??= true
+
   return (
     <>
       <Navbar />
