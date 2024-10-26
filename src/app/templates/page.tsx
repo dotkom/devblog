@@ -6,7 +6,7 @@ const anArticle: PostProps = {
     hook: "Men det visste jo alle fra før. I tilfelle du er appkommer eller bare dum, og ikke er enig, så forklarer denne artikkelen hvorfor!",
     image: {
         src: onboardingLogo,
-        alt: "Dotkom sitt logo",
+        alt: "Dotkom Onboaring 2024 sin logo",
         fill: false
     },
     author: "Henry Græbserg",
