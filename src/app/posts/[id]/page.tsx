@@ -1,9 +1,8 @@
 import { FC } from 'react'
 import Image, { StaticImageData } from 'next/image'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+//import { }
 
-export interface PostProps {
+interface PostContent {
   title: string
   hook?: string
   image?: {
@@ -15,10 +14,11 @@ export interface PostProps {
   content: string
 }
 
-const Post: FC<PostProps> = ({ title, hook, image={src: "https://picsum.photos/1000/500", alt: "A randomly generated image from Lorem Picsum"}, author, date, content }) => {
+const Post: FC<{params: Promise<{id: string}>}> = ({ params }) => {
+  //content = await 
+  
   return (
     <>
-      <Navbar />
       <main>
         <div className="grid grid-cols-2 grid-rows-2 h-[50vh] w-[100vw] overflow-hidden relative gap-4">
           <Image src={image.src} alt={image.alt} height={0} width={0} sizes="100vw" className="col-start-1 col-end-3 w-[100vw] h-auto" />
@@ -33,10 +33,9 @@ const Post: FC<PostProps> = ({ title, hook, image={src: "https://picsum.photos/1
             <h2 className="text-lg">Skrevet av: {author}</h2>
             <h2 className="text-lg">Publisert: {date}</h2>
           </div>
-          <p>{content}</p>
+          <p dangerouslySetInnerHTML={{__html: content}}></p>
         </article>
       </main>
-      <Footer />
     </>
   )
 }
