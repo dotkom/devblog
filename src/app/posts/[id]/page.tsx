@@ -26,8 +26,6 @@ export const getContent = async (id: string) => {
 
 const page: FC<{params: Promise<{id: string}>}> = async ({ params }) => {
   const content = await getContent((await params).id)
-  
-  console.log(content)
 
   content.image ??= {
     src: "https://picsum.photos/1000/500",
