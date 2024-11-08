@@ -18,7 +18,6 @@ interface PostContent {
 export const getContent = async (id: string) => {
   const sql = neon(process.env.DATABASE_URL as string)
 
-  //Placeholder table query
   const post = await sql`SELECT * FROM posts WHERE id = ${id}`
 
   return post[0] as PostContent
@@ -46,7 +45,7 @@ const page: FC<{params: Promise<{id: string}>}> = async ({ params }) => {
         <article className="p-4 flex flex-col gap-4">
           <div>
             <h2 className="text-lg">Skrevet av: {content.author}</h2>
-            <h2 className="text-lg">Publisert: {content.posting_date.toLocaleDateString()}</h2>
+            <h2 className="text-lg">Publisert: {content.posting_date.toLocaleDateString("no")}</h2>
           </div>
           <p dangerouslySetInnerHTML={{__html: content.body_text}}></p>
         </article>
