@@ -17,7 +17,7 @@ const config: Config = {
         accent: "#B432DB",
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
