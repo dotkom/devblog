@@ -22,6 +22,10 @@ interface NavButtonProps {
 //Funker kanskje, vet egentlig ikke
 //^Her har dere en visualisering av prosessen programmerere går gjennom som gjøre dem gale^ - Henry 2024-10-02
 //fyi, forvirrer meg fortsatt hvordan det er i limbo mellom å funke og ikke funke - Henry 2024-10-09
+
+//FANT UT AV DET
+//Tailwind genererer ikke klassene som ikke blir brukt, så når man definerer dem slikt ser tailwind bare "bg-" og generer ingenting
+//FUCK YEAH, fikser det at some point - Henry 2024-11-08
 const NavButton: FC<NavButtonProps> = ({ buttonText, href, bgColor="primary", textColor="text_secondary", borderColor="secondary", width="fit", paddingX=3, paddingY=3, title }) => {
     return (
         <Link href={href}>
